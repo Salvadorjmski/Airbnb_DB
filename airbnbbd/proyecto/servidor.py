@@ -3,17 +3,22 @@ from propiedades import listar_propiedades, crear_propiedad_con_ubicacion, elimi
 from reservas import crear_reserva_y_pago
 from reportes import reporte_reservas_detallado, reporte_ingresos_por_anfitrion
 from bd_conections import get_conn
+from usuarios import listar_anfitriones, listar_huespedes, buscar_usuario_por_correo
+
         
 def menu(cn):
     while True:
         print("""
 ================ MENÚ ================
 1) Listar propiedades
-2) Crear propiedad + ubicación
-3) Crear reserva y/o pago 
+2) Crear propiedad + ubicación (TX)
+3) Crear reserva y/o pago (TX)
 4) Reporte reservas detalladas
 5) Reporte ingresos por anfitrión
 6) Eliminar propiedad
+7) Listar ANFITRIONES
+8) Listar HUÉSPEDES
+9) Buscar usuario por CORREO
 0) Salir
 """)
         op = input("Opción: ").strip()
@@ -23,8 +28,12 @@ def menu(cn):
         elif op == "4": reporte_reservas_detallado(cn)
         elif op == "5": reporte_ingresos_por_anfitrion(cn)
         elif op == "6": eliminar_propiedad(cn)
+        elif op == "7": listar_anfitriones(cn)
+        elif op == "8": listar_huespedes(cn)
+        elif op == "9": buscar_usuario_por_correo(cn)
         elif op == "0": break
         else: print("Opción inválida.")
+
 
 def main():                       
     cn = get_conn()
