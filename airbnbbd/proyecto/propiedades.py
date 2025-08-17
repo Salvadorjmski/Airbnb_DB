@@ -21,7 +21,7 @@ def listar_propiedades(cn):
               f"| anfitrión: {x['anfitrion']} | disponible: {disp}")
 
 def crear_propiedad_con_ubicacion(cn):
-    print("\n=== Crear propiedad + ubicación (TX) ===")
+    print("\n=== Crear propiedad + ubicación ===")
     try:
         anfitrion_id   = int(input("ID usuario ANFITRION: ").strip())
         tipo           = input("Tipo [CASA/DEPARTAMENTO/HABITACION/CABANA/OTRO]: ").strip().upper()
