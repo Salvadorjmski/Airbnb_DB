@@ -11,8 +11,8 @@ def menu(cn):
         print("""
 ================ MENÚ ================
 1) Listar propiedades
-2) Crear propiedad + ubicación (TX)
-3) Crear reserva y/o pago (TX)
+2) Crear propiedad + ubicación
+3) Crear reserva y/o pago 
 4) Reporte reservas detalladas
 5) Reporte ingresos por anfitrión
 6) Eliminar propiedad
