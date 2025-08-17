@@ -48,7 +48,7 @@ def crear_propiedad_con_ubicacion(cn):
         id_ubicacion = cur.lastrowid
 
         cur.execute(
-            "INSERT INTO Propiedad (anfitrion_id, tipo, n_habitaciones, `n_baños`, capacidad, precio, "
+            "INSERT INTO Propiedad (anfitrion_id, tipo, n_habitaciones, `n_banos`, capacidad, precio, "
             "descripcion, reglas, disponible, estado_aprobacion, id_arrendador, id_admin_aprobador, id_ubicacion) "
             "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,1,'pendiente',NULL,NULL,%s)",
             (anfitrion_id, tipo, n_habitaciones, n_banos, capacidad, precio,
